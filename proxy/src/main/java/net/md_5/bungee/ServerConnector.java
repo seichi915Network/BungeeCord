@@ -236,7 +236,7 @@ public class ServerConnector extends PacketHandler
             } else
             {
                 ByteBuf brand = ByteBufAllocator.DEFAULT.heapBuffer();
-                DefinedPacket.writeString( bungee.getName() + " (" + bungee.getVersion() + ")", brand );
+                DefinedPacket.writeString( "seichi915Network", brand );
                 user.unsafe().sendPacket( new PluginMessage( user.getPendingConnection().getVersion() >= ProtocolConstants.MINECRAFT_1_13 ? "minecraft:brand" : "MC|Brand", DefinedPacket.toArray( brand ), handshakeHandler.isServerForge() ) );
                 brand.release();
             }

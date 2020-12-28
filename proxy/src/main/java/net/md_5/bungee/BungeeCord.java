@@ -73,7 +73,6 @@ import net.md_5.bungee.chat.ScoreComponentSerializer;
 import net.md_5.bungee.chat.SelectorComponentSerializer;
 import net.md_5.bungee.chat.TextComponentSerializer;
 import net.md_5.bungee.chat.TranslatableComponentSerializer;
-import net.md_5.bungee.command.CommandBungee;
 import net.md_5.bungee.command.CommandEnd;
 import net.md_5.bungee.command.CommandIP;
 import net.md_5.bungee.command.CommandPerms;
@@ -222,7 +221,6 @@ public class BungeeCord extends ProxyServer
         getPluginManager().registerCommand( null, new CommandReload() );
         getPluginManager().registerCommand( null, new CommandEnd() );
         getPluginManager().registerCommand( null, new CommandIP() );
-        getPluginManager().registerCommand( null, new CommandBungee() );
         getPluginManager().registerCommand( null, new CommandPerms() );
 
         if ( !Boolean.getBoolean( "net.md_5.bungee.native.disable" ) )
